@@ -4,6 +4,7 @@ Tool for practicing cse231 practice exams (Michigan State University) in a strea
 old exams at https://www.cse.msu.edu/~cse231/Online/Exams/
 copy text of old exam into text file and put in folder with .py file (only tested exam2c19f and exam2c 18f)
 make sure there are no empty lines between answers of a question
+
 Ex.
 A) 2
 B) 5
