@@ -6,13 +6,14 @@ copy text of old exam into text file and put in folder with .py file (only teste
 make sure there are no empty lines between answers of a question
 
 Ex.
-A) 2
-B) 5
-is good
+
+ A) 2  
+ B) 5  
+ is good
 
 A) 2
 
-B) 5
+B) 5  
 will cause issues, make sure the remove the empty line before running
 
 Percentage of correct answers given at the end is based on % of questions
