@@ -1,0 +1,704 @@
+CSE 231 US19             Last name (printed):  ________________________________
+
+Exam #2                  First name (printed): ________________________________
+
+Form 2 A                 
+
+
+Directions:
+
+a. DO NOT OPEN YOUR EXAM BOOKLET UNTIL YOU HAVE BEEN TOLD TO BEGIN.
+
+b. This exam booklet contains 50 questions, each of which will be weighted
+equally at 5 points each.  The total points for the exam is 250 points.
+
+c. You may use one 8.5" x 11" note sheet during the exam.  No other reference
+materials or electronic devices may be used during the examination, i.e. no
+calculators, cell phones, mp3 players, etc. Paper dictionaries are allowed.
+Use of a device will earn a zero for the course.
+
+d. Questions will not be interpreted during the examination.
+
+e. You should choose the single best alternative for each question, even if
+you believe that a question is ambiguous or contains a typographic
+error.  If a question has more than one best answer, credit will be
+given for any of the correct answers
+
+f. Please fill in the requested information at the top of this exam booklet.
+
+g. Use a #2 pencil to encode any information on the OMR form.
+
+h. Please encode the following on the OMR form:
+
+     -- Last name and first initial
+     -- MSU PID
+     -- Exam form (2 A)
+
+i. Please sign the OMR form.
+
+j. Only answers recorded on your OMR form for multiple choice questions will be 
+counted for credit.  Completely erase any responses on the OMR form that you 
+wish to delete.
+
+Form 2A
+1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   
+C    D    B    B    C    A    B    C    C    D    B    C    A    B    B    
+
+16   17   18   19   20   21   22   23   24   25   26   27   28   29   30   
+B    A    A    A    C    C    B    D    CD   B    B    C    A    B    D    
+
+31   32   33   34   35   36   37   38   39   40   41   42   43   44   45   
+A    A    D    A    B    B    C    D    D    C    D    B    A    B    C    
+
+46   47   48   49   50   
+D    D    C    B    B  
+
+
+############
+# Figure 1 #
+############
+  L = []
+  for i in range(3,5):
+      r = []
+      for j in range(i-1,i+2):
+          r.append(j)   # note that this is 'j', not 'i'
+      L.append(r)
+  
+  print(L)  # Line 1
+  L[0][1]='X'
+  L[1][0]='Y'
+  print(L)  # Line 2
+
+01.  When the code in Figure 1 is run, what is printed by Line 1?
+
+     A) [[2, 3, 4, 5], [3, 4, 5, 6], [4, 5, 6, 7]]
+     B) [[2, 3, 4], [3, 4, 5], [4, 5, 6]]
+     C) [[2, 3, 4], [3, 4, 5]]
+     D) [[2, 3, 4, 5], [3, 4, 5, 6]] 
+     E)  None of the above.
+
+02.  When the code in Figure 1 is run, what is printed by Line 2?
+
+     A) [[2, 'X', 4, 5], ['Y', 4, 5, 6], [4, 5, 6, 7]]
+     B) [[2, 'X', 4], ['Y', 4, 5], [4, 5, 6]]
+     C) [[2, 'X', 4, 5], ['Y', 4, 5, 6]]
+     D) [[2, 'X', 4], ['Y', 4, 5]]
+     E)  None of the above.
+
+03.  Given matrix = [[1,2,3],[4,5,6],[7,8,9]]
+     representing the matrix
+            1 2 3
+            4 5 6
+            7 8 9
+     what best describes what this function does?
+
+    def doSomething(matrix):
+        return [matrix[i][i] for i in range(3)]
+
+     A) The function returns a list of the i-th charcter in a row.
+     B) The function returns the diagonal of a matrix as a list, e.g. [1,5,9].
+     C) The function returns a list of column numbers, e.g. [1,2,3].
+     D) The function returns a list that is a column of the matrix, e.g. [1,4,7].
+     E) None of the above.
+
+04.  Given matrix = [[1,2,3],[4,5,6],[7,8,9]]
+     representing the matrix
+            1 2 3
+            4 5 6
+            7 8 9
+     which expression returns the list [7, 5, 3]?
+
+     A) [matrix[2-i][i] for i in range(3,-1)]
+     B) [matrix[2-i][i] for i in range(0,3)]
+     C) [matrix[2-i][i] for i in range(2,-1,-1)]
+     D) [matrix[2-i][i] for i in range(0,3,-1)]
+     E) None of the above.
+
+
+05.  Which code will open the file test.txt for writing?
+
+     A) open('test.txt')
+     B) open('test.txt','r')
+     C) open('test.txt','w')
+     D) All of the above.
+     E) None of the above.
+
+06. Given s = "a b c d"
+    which code produces L = ['a','b','c','d'] ?
+
+    A) L = s.split()
+    B) L = s.strip(',')
+    C) L = s.split(',')
+    D) L = list(s.strip(','))
+    E) None of the above.
+
+############
+# Figure 2 #
+############
+  try:
+      x = float(input('Input: '))
+      result = 10/x
+      print(result)
+  
+  except FloatingPointError:
+      print("Error1")
+  
+  except ValueError:
+      print("Error2")
+
+07. When the code in Figure 2 is run, what is the output when the
+    input is A?
+
+     A) Error1 
+     B) Error2 
+     C) A 
+     D) An unhandled TypeError is generated. 
+     E) None of the above.
+     
+08. When the code in Figure 2 is run, what is the output when the
+    input is 2?
+
+     A) Error1 
+     B) Error2 
+     C) 5.0 
+     D) An unhandled TypeError is generated. 
+     E) None of the above.
+
+09. When the code in Figure 2 is run, what is the output when the
+    input is 2.5?
+
+     A) Error1 
+     B) Error2 
+     C) 4.0 
+     D) An unhandled TypeError is generated. 
+     E) None of the above.
+
+
+############
+# Figure 3 #
+############
+        def f(p):
+	    p.append(5)
+	    p.sort()   
+
+        L = [3,1,2,3]
+	L2 = f(L)
+        print(L2)     # Line 1
+	print(L)      # Line 2
+
+10.  What is printed by Line 1 of Figure 3?
+
+     A) [5]
+     B) [1,2,3,3,5]
+     C) [1,2,3,5]
+     D) None
+     E) None of the above.
+
+11.  What is printed by Line 2 of Figure 3?
+
+     A) [5]
+     B) [1,2,3,3,5]
+     C) [1,2,3,5]
+     D) [1,2,3]
+     E) None of the above.
+
+12. Given z = 12345
+    what prints 12,345?
+
+    A) print(z[:2],",",z[2:])
+    B) print(z[:2]+','+z[2:])
+    C) print("{:,d}".format(z))
+    D) print("{:i,}".format(z))
+    E) None of the above
+
+############
+# Figure 4 #
+############
+
+  a = [1,2,3,4] 
+  b = ['a','b','c','d']
+  D = {}
+  for i,a_item in enumerate(a):
+      for j,b_item in enumerate(b):
+          if i+1 == int(a_item):
+              D[i] = b_item
+  print(D)   # Line 1
+  print(i,j) # Line 2
+  
+13. What is printed by Line 1 in Figure 4?
+
+    A) {0: 'd', 1: 'd', 2: 'd', 3: 'd'}
+    B) {0: 'a', 1: 'b', 2: 'c', 3: 'd'}
+    C) {'0': 'd', '1': 'd', '2': 'd', '3': 'd'}
+    D) {'0': 'a', '1': 'b', '2': 'c', '3': 'd'}
+    E) None of the above.
+
+14. What is printed by Line 2 in Figure 4?
+
+    A) 0 0
+    B) 3 3
+    C) 4 4
+    D) None None
+    E) None of the above.
+
+############
+# Figure 5 #
+############
+  A = (20, 30, 40)
+  B = (-3, -4, -5)
+  C = (20, 25, 30, 35, 40, 45, 50)
+  print( A[2] + B[2] )     # Line 1
+  print( A[1:2] + B[2:3] ) # Line 2
+  print( C[1], C[-3] )     # Line 3
+
+15. What will be displayed by the Python code labeled "Line 1" in Figure 5? 
+
+    A) 26
+    B) 35
+    C) 45
+    D) 334
+    E) None of the above.
+
+16. What will be displayed by the Python code labeled "Line 2" in Figure 5? 
+
+    A) 30 -5
+    B) (30, -5)
+    C) 25
+    D) (25)
+    E) None of the above.
+
+
+17. What will be displayed by the Python code labeled "Line 3" in Figure 5? 
+
+    A) 25 40
+    B) (25, 40)
+    C) 20 40
+    D) (20, 40)
+    E) None of the above.
+
+
+############
+# Figure 6 #
+############
+  A = {1, 2, 3, 3}
+  B = {2, 3, 5, 7, 2, 3, 6}
+  C = { X*Y for X in range(3) for Y in range(4) }
+  print( len(A), len(B) ) # Line 1
+  print( A^B ) # Line 2
+  print( A|B ) # Line 3
+  print( A-B ) # Line 4
+  print( A&B ) # Line 5
+  print( C ) # Line 6
+
+18. What is printed by Line 1 in Figure 6?
+
+    A) 3 5
+    B) 4 7
+    C) 2 4
+    D) None
+    E) None of the above.
+
+19. What is printed by Line 2 in Figure 6?
+
+    A) {1, 5, 6, 7}
+    B) {2, 3}
+    C) {1, 2, 3, 5, 6, 7}
+    D) {0, 1, 2, 3, 4, 6}
+    E) None of the above.
+
+20. What is printed by Line 3 in Figure 6?
+
+    A) {1, 5, 6, 7}
+    B) {2, 3}
+    C) {1, 2, 3, 5, 6, 7}
+    D) {0, 1, 2, 3, 4, 6}
+    E) None of the above.
+
+21. What is printed by Line 4 in Figure 6?
+
+    A) {1, 5}
+    B) {2, 3}
+    C) {1}
+    D) {6, 7}
+    E) None of the above.
+
+22. What is printed by Line 5 in Figure 6?
+
+    A) {1, 5}
+    B) {2, 3}
+    C) {1}
+    D) {6, 7}
+    E) None of the above.
+
+23. What is printed by Line 6 in Figure 6?
+
+    A) {1, 5, 6, 7}
+    B) {2, 3}
+    C) {1, 2, 3, 5, 6, 7}
+    D) {0, 1, 2, 3, 4, 6}
+    E) None of the above.
+
+
+24. Given the dictionary d1 = {'a':1, 'e':3, 'b':7, 'g':2}
+    what code creates d2 as a sorted list of tuples. 
+    That is, generates [('a', 1), ('b', 7), ('e', 3), ('g', 2)] 
+
+     A) d2 = list(d1.items()).sort()
+     B) d2 = sorted([(y,x) for x,y in d1.items()])
+     C) d2 = sorted(tuple(d1.items()))
+     D) d2 = sorted([(a,b) for a,b in d1.items()])
+     E) None of the above
+
+############
+# Figure 7 #
+############
+  import copy
+  
+  L1 = ['a','b']
+  L2 = [1, 2, L1]
+  L3 = [L2, 'x', 'y']
+  print(L3)   # Line 1
+  
+  L4 = L3[:]
+  L5 = copy.deepcopy(L3)
+  L6 = L3
+  print(L4 is L3, L5 is L3, L6 is L3)   # Line 2
+  
+  L1.append(100)
+  print(L4 == L3, L5 == L3, L6 == L3)   # Line 3
+  
+  L3.append(200)
+  print(L3)   # Line 4
+  print(L4)   # Line 5
+  print(L5)   # Line 6
+  print(L6)   # Line 7
+  
+25. If the program in Figure 7 is run, what is printed by Line 1?
+
+    A) [L2, 'x', 'y']
+    B) [[1, 2, ['a', 'b']], 'x', 'y']
+    C) [1, 2, 'a', 'b', 'x', 'y']
+    D) [[1, 2, L1, 'x', 'y']
+    E) None of the above.
+
+26. If the program in Figure 7 is run, what is printed by Line 2?
+
+    A) True True True
+    B) False False True
+    C) True False True
+    D) True False False
+    E) None of the above.
+
+27. If the program in Figure 7 is run, what is printed by Line 3?
+
+    A) True True True
+    B) False False True
+    C) True False True
+    D) True False False
+    E) None of the above.
+
+28. If the program in Figure 7 is run, what is printed by Line 4?
+
+    A) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    B) [[1, 2, ['a', 'b', 100]], 'x', 'y']
+    C) [[1, 2, ['a', 'b']], 'x', 'y', 200]
+    D) [[1, 2, ['a', 'b']], 'x', 'y']
+    E) None of the above.
+
+29. If the program in Figure 7 is run, what is printed by Line 5?
+
+    A) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    B) [[1, 2, ['a', 'b', 100]], 'x', 'y']
+    C) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    D) [[1, 2, ['a', 'b']], 'x', 'y']
+    E) None of the above.
+
+30. If the program in Figure 7 is run, what is printed by Line 6?
+
+    A) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    B) [[1, 2, ['a', 'b', 100]], 'x', 'y']
+    C) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    D) [[1, 2, ['a', 'b']], 'x', 'y']
+    E) None of the above.
+
+31. If the program in Figure 7 is run, what is printed by Line 7?
+
+    A) [[1, 2, ['a', 'b', 100]], 'x', 'y', 200]
+    B) [[1, 2, ['a', 'b', 100]], 'x', 'y']
+    C) [[1, 2, ['a', 'b']], 'x', 'y', 200]
+    D) [[1, 2, ['a', 'b']], 'x', 'y']
+    E) None of the above.
+
+32. Which of the following 
+    is NOT a characteristic of object-oriented programming?
+
+     A) homomorphism
+     B) encapsulation 
+     C) inheritance
+     D) polymorphism
+     E) None of the above, i.e. they are all characteristics of OOP.
+
+33. If the '+' operator is overloaded, such as in the Rational class we defined,
+    an expression such as a + b where a and b are Rationals, is called as:
+
+     A) b.__radd__(a)
+     B) a.__+__(b)
+     C) self.__add__(b)
+     D) a.__add__(b)
+     E) None of the above.
+
+
+############
+# Figure 8 #
+############
+
+  s = "row, row, row your boat"
+  D = {}
+  for ch in s:
+      if ch.isalpha() and ch in D:
+          D[ch]+=1
+      else:
+          D[ch]=1
+
+  print(len(D))   # Line 1
+  print(D['o'])   # Line 2
+  print(D[' '])   # Line 3
+
+34. What is printed by Line 1 when Figure 8 is executed?
+
+    A) 10
+    B) 8
+    C) 5
+    D) 3
+    E) None of the above
+
+35. When the program in Figure 8 is run, what is the output of Line 2?
+
+    A) 4
+    B) 5
+    C) 6
+    D) 7
+    E) None of the above
+
+36. When the program in Figure 8 is run, what is the output of Line 3?
+
+    A) 0
+    B) 1
+    C) 2
+    D) None
+    E) None of the above
+
+37. What is printed by 
+
+  for x in range(2,14,4):
+      print(x, end = ' ')
+
+   A) 2 
+   B) 2 6
+   C) 2 6 10
+   D) 2 6 10 14
+   E) None of the above.
+
+
+
+############
+# Figure 9 #
+############
+  L = [123.456, 789.02456, 3]
+  
+  for n in L:
+      print("{:7.2f}".format(n))
+
+38. What is printed by Figure 9?
+    Each choice includes the following line that is not part of what is printed.
+   1234567890123   # this line is simply a guide to help you count spacing
+
+   A) 
+    123.46
+    789.02
+      3.00
+    1234567890123   # this line is simply a guide to help you count spacing
+    
+   B) 
+    123.46
+    789.02
+    3.00 
+    1234567890123   # this line is simply a guide to help you count spacing
+
+   C) 
+    123.46
+    789.02
+     3.00
+    1234567890123   # this line is simply a guide to help you count spacing
+
+   D) 
+     123.46
+     789.02
+       3.00
+    1234567890123   # this line is simply a guide to help you count spacing
+
+   E) None of the above.
+
+   class TestClass(object):
+       def __init__(self,L=None):         ############
+           self.L = []                    # Figure 10 #
+           if L:                          ############
+               for i in L:
+                   if i not in self.L:
+                       self.L.append(i)
+
+       def __add__(self,param):
+           if type(param) == TestClass:
+               self.L.extend(param.L)
+               return TestClass(self.L)
+           else:
+               return self.L + param
+
+       def __str__(self):
+           return 'L: {}'.format(self.L)
+
+   inst1 = TestClass([1,2,2,3,3])
+   print(inst1)                               # Line 1
+   inst2 = TestClass([2,3,4])
+   sum_inst_1 = inst1 + inst2
+   sum_inst_2 = inst2 + [7,8,9]
+   print(inst1)                               # Line 2
+   print(sum_inst_1)                          # Line 3
+   print(sum_inst_2)                          # Line 4
+   print(isinstance(sum_inst_1,TestClass))    # Line 5
+
+39. What is printed by Line 1 when Figure 10 is executed?
+
+    A) [1, 2, 2, 3, 3]
+    B) L: 1, 2, 3
+    C) [1, 2, 3]
+    D) L: [1, 2, 3]
+    E) None of the above
+
+40. What is printed by Line 2 when Figure 10 is executed?
+
+    A) L: [1, 2, 3]
+    B) [1, 2, 3, 2, 3, 4]
+    C) L: [1, 2, 3, 2, 3, 4]
+    D) L: [1, 2, 3, 4]
+    E) None of the above
+
+41. What is printed by Line 3 when Figure 10 is executed?
+
+    A) [1, 2, 3, 4]
+    B) [1, 2, 3, 2, 3, 4]
+    C) L: [1, 2, 3, 2, 3, 4]
+    D) L: [1, 2, 3, 4]
+    E) None of the above
+
+42. What is printed by Line 4 when Figure 10 is executed?
+
+    A) L: [2, 3, 4, 7, 8, 9]
+    B) [2, 3, 4, 7, 8, 9] 
+    C) [2, 3, 4, [7, 8, 9]]
+    D) L: [2, 3, 4, [7, 8, 9]]
+    E) None of the above
+
+43. What is printed by Line 5 when Figure 10 is executed?
+
+    A) True
+    B) False
+
+
+#############
+# Figure 11 #
+#############
+  class myClass (object):
+      def __init__(self,color='red',L=None):
+          self.color = color
+          if L == None:
+              self.L = ['x','y']
+          else:
+              self.L = L
+      def __str__(self):
+          return '{:s}:{:s}'.format(self.color,str(self.L))
+      def method1(self,limit=10):
+          result=[]
+          for item in self.L:
+              if item in self.color and len(result) < limit:
+                  result.append(item)
+          return result
+      def method2(self,num):
+          return self.L[num]
+  inst1 = myClass()
+  print(inst1)              # Line 1
+  inst2 = myClass('pea green',['a','b','c','d','e'])
+  print(inst2)              # Line 2
+  print(inst2.method1())    # Line 3
+  print(inst2.method2(3))   # Line 4
+
+44. What output does Line 1 from Figure 11 produce?
+
+    A) red:None
+    B) red:['x', 'y']
+    C) red:[]
+    D) :[]
+    E) None of the above.
+
+45. What output does Line 2 from Figure 11 produce?
+
+    A) red:['x', 'y']
+    B) red:['a','b','c','d','e']
+    C) pea green:['a', 'b', 'c', 'd', 'e']
+    D) pea green:['x', 'y']
+    E) None of the above.
+
+46. What output does Line 3 from Figure 11 produce?
+
+    A) ['x', 'y']
+    B) ['a','b','c','d','e']
+    C) ['e', 'a', 'e', 'e']
+    D) ['a','e']
+    E) None of the above.
+
+47. What output does Line 4 from Figure 11 produce?
+
+    A) a
+    B) b
+    C) c
+    D) d
+    E) None of the above.
+
+#############
+# Figure 12 #
+#############
+  D = {"a": [{1,3,5},{2,4,6}], "x": [{1,2,3},{4,5,6}]}
+  
+  print(D["a"][0] & D["x"][1])    # Line 1
+  print(sum(D['x'][1]))           # Line 2
+  
+  L = []
+  c = 0
+  for i in D.values():
+      L.append(i[c])
+      c += 1
+  print(L)                        # Line 3
+  
+48. What is printed by Line 1 in Figure 12?
+
+  A) {1, 3, 4, 5, 6}
+  B) {1, 3, 5, 4, 5, 6}
+  C) {5}
+  D) {1, 3, 5, 6}
+  E) None of the above.
+
+49. What is printed by Line 2 in Figure 12?
+
+  A)  6
+  B) 15
+  C) 21
+  D) None
+  E) None of the above.
+
+50. What is printed by Line 3 in Figure 12?
+
+  A) [1, 3, 5, 4, 5, 6]
+  B) [{1, 3, 5}, {4, 5, 6}]
+  C) [[1, 3, 5], [4, 5, 6]]
+  D) {1, 3, 4, 5, 6}
+  E) None of the above.

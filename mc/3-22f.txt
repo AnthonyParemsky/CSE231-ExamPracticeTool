@@ -1,0 +1,559 @@
+CSE 231 FS22
+
+Exam #3
+Form
+Directions:
+
+a. This exam contains 30 questions, each of which will be weighted equally at 4 points each. The total points for the exam part of the exam is 120 points.
+
+b. You may use one 8.5" x 11" note sheet during the exam. No other reference materials or electronic devices may be used during the examination, i.e. no calculators, cell phones, mp3 players, etc. Paper dictionaries are allowed.
+
+c. You are allowed 2 scrap papers.
+
+d. Questions will not be interpreted during the examination.
+
+e. You should choose the single best alternative for each question, even if you believe that a question is ambiguous or contains a typographic error. If a question has more than one best answer, credit will be given if you choose all the correct answers.
+
+Form
+1    2    3    4    5    6    7    8    9    10   11   12   13   14   15 
+C    D    C    B    C    D    D    B    B    B    C    B    A    B    B
+
+16   17   18   19   20   21   22   23   24   25   26   27   28   29   30
+B    A    A    D    C    B    A    A    A    A    C    C    B    C    C
+
+
+01. What is stored in the variable, x, after evaluating the following statement?
+
+     x = 10 - 3 ** 2 + 3 % 10
+
+	A) 1
+	B) 2
+	C) 4
+	D) 52
+	E) None of the above
+
+
+02. What is the output of the following code segment?
+
+     x = []
+     y = 3
+     z = 13
+     if x:
+         print("A",end='')
+     elif y and z < 20:
+         print("B",end='')
+     if y > z % y:
+         print("C")
+
+	A) A
+	B) B
+	C) AC
+	D) BC
+	E) None of the above
+
+
+###############
+# List figure #
+###############
+
+L1 = [3,'s',2.5]
+L2 = L1
+L1.append(4)
+print(L2)        # Line 1
+L2[0] = [3]
+L3 = L2[:]
+L1.append('q')
+L3[1] = 't'
+print(L2)        # Line 2
+print(L3)        # Line 3
+
+
+03. What is output by Line 1 when the figure above is executed?
+
+	A) [3, 't', 2.5, 4, 'q']
+	B) [[3], 's', 2.5, 4, 'q']
+	C) [3, 's', 2.5, 4]
+	D) [[3], 's', 2.5, 4]
+	E) None of the above
+
+
+04. What is output by Line 2 when the figure above is executed?
+
+	A) [3, 't', 2.5, 4, 'q']
+	B) [[3], 's', 2.5, 4, 'q']
+	C) [3, 's', 2.5, 4]
+	D) [[3], 's', 2.5, 4]
+	E) None of the above
+
+
+05. What is output by Line 3 when the figure above is executed?
+
+	A) [3, 't', 2.5, 4]
+	B) [[3], 't', 2.5, 4, 'q']
+	C) [[3], 't', 2.5, 4]
+	D) [3, 't', 2.5, 4, 'q']
+	E) None of the above
+
+
+06. Consider the following function definition.
+
+     def presto(x):
+         y = 7
+         z = x % 3
+         x = 10
+         return x*x+y
+
+    What is output by the following statement?
+
+     x = 5
+     y = 4
+     z = presto(x)
+     print(x,y,z)
+
+	A) 5 4 1
+	B) 10 7 1
+	C) 10 7 107
+	D) 5 4 107
+	E) None of the above
+
+
+07. Consider the following function
+
+     def cse(s):
+         if len(s) != 3:
+             return "1"
+         if s[1] > s[2]:
+             return s[1]
+         return s[2]
+
+    What is output when the function called in the statement below?
+
+     print(cse("331")+cse("102")+cse("231-001"))
+
+	A) 331
+	B) 102
+	C) 101
+	D) 321
+	E) None of the above
+
+
+08. What is output by the following segment of code? 
+
+     Hint: pay attention to the value of x
+
+     x = 1
+     lst = [10,20,25,40]
+     for i in lst:
+         if i % x > 0:
+             x += i
+         x += 1
+     print(x)
+
+	A) 5
+	B) 70
+	C) 75
+	D) 100
+	E) None of the above
+
+
+09. What is the output of the following code segment?
+
+    x = 4
+    total = 0
+    while x < 10:
+        y = 0
+        while y < 2:
+            total += 5
+            y += 1
+        x += 4
+    print(total)
+
+	A) 50
+	B) 20
+	C) 75
+	D) 125
+	E) None of the above
+
+
+#####################
+# Dictionary Figure #
+#####################
+
+D1 = dict()
+dijkstra = '''If we wish to count lines of code, we should not
+                regard them as "lines produced" but as "lines spent".
+              ''' 
+for c in dijkstra:
+    if c in D1 and c <= 'c':
+        D1[c] += 1
+    else:
+        D1[c] = 1
+
+print(D1['w'])                #LINE 1
+print(D1['c'])                #LINE 2
+D1['t'] += D1['a']
+print(D1['t'])                #LINE 3
+
+
+10. What is output by Line 1 when the figure above is executed?
+
+	A) 0
+	B) 1
+	C) 2
+	D) KeyError: 'w'
+	E) None of the above
+
+
+11. What is output by Line 2 when the figure above is executed?
+
+	A) 0
+	B) 1
+	C) 2
+	D) KeyError: 'c'
+	E) None of the above
+
+
+12. What is output by Line 3 when the figure above is executed?
+
+	A) 1
+	B) 4
+	C) 8
+	D) KeyError: 't'
+	E) None of the above
+
+
+###############
+# Sets Figure #
+###############
+
+P = {'A','AA','AB','C','BC'}
+Q = {'AA','AC','C','B'}
+R = {'C','B'}
+print(P ^ R)                #LINE 1
+print(P | Q)                #LINE 2
+S = Q & R
+print(S is R and S == R)    #LINE 3
+
+
+13. What is output by Line 1 when the figure above is executed?
+
+	A) {'BC', 'B', 'AA', 'A', 'AB'}
+	B) {'AB', 'BC', 'A', 'AA'}
+	C) {'C', 'AB', 'B', 'BC', 'A', 'AA'}
+	D) {'C'}
+	E) None of the above
+
+
+14. What is output by Line 2 when the figure above is executed?
+
+	A) {'AB', 'B', 'BC', 'A', 'AC'}
+	B) {'AC', 'BC', 'B', 'AA', 'A', 'C', 'AB'}
+	C) {'A', 'AB', 'BC'}
+	D) {'AA', 'C'}
+	E) None of the above
+
+
+15. What is output by Line 3 when the figure above is executed?
+
+	A) True
+	B) False
+	C) TypeError
+	D) None
+	E) None of the above
+
+
+###############
+# File Figure #
+###############
+
+def read_data(fp,L):
+    for row in fp:
+        row_data = row.strip().split(',')
+        X =  row_data[0::2]
+        L.append(X)
+
+
+fp = open('simple.txt','r')
+
+''' simple.txt 
+3,2,4,0,4,1
+1,3,2,5,1,2
+9,0,1,4,5,6
+'''
+
+L = list()
+read_data(fp,L)
+print(L)
+print(L[0])		    	#LINE 1
+print(L[2][0])			#LINE 2
+print(L[1][2]+L[2][2])	        #LINE 3
+
+
+16. What is output by Line 1 when the figure above is executed?
+
+	A) [3, 2, 4, 0, 4, 1]
+	B) ['3', '4', '4']
+	C) 3
+	D) '3'
+	E) None of the above
+
+
+17. What is output by Line 2 when the figure above is executed?
+
+	A) 9
+	B) '9'
+	C) 4
+	D) '4'
+	E) None of the above
+
+
+18. What is output by Line 3 when the figure above is executed?
+
+	A) 15
+	B) 21
+	C) 3
+	D) 6
+	E) None of the above
+
+
+19. Assume that there are definitions of three classes - SongBird, BirdOfPrey, FlightlessBird - that all inherit from a base class, Bird. The Bird class has a method called "make_bird_call" defined. Given the code snippet below, what term describes the behavior exhibited by LINE A?
+
+     bird_lst = [SongBird(),FlightlessBird(),SongBird(),BirdOfPrey()]
+     for bird in bird_lst:
+         bird.make_bird_call()    #LINE A
+
+	A) Encapsulation
+	B) Inheritance
+	C) Instantiation
+	D) Polymorphism
+	E) None of the above
+
+
+20. When a programmer wishes to instantiate a new object based on a class definition called MyClass, what method is called implicitly?
+
+	A) MyClass()
+	B) __MyClass__()
+	C) init()
+	D) __init__()
+	E) None of the above
+
+
+####################
+# Classes Figure 1 #
+####################
+
+class Mystery (object):
+    def __init__(self,first=1,second=2):
+        self.first = first
+        self.second = second
+    def __str__(self):
+        return '{}'.format(self.first * 10 ** self.second)
+    def __gt__(self,other):
+        if self.second == other.second:
+            return self.first > other.first
+        else:
+            return self.second > other.second
+        
+A = Mystery(2,3)
+B = Mystery(2)
+print(A)      #LINE 1
+print(A > B)  #LINE 2
+
+
+21. What is output by Line 1 when the figure above is executed?
+
+	A) 2, 3
+	B) 2000
+	C) 60
+	D) 200
+	E) None of the above
+
+
+22. What is output by Line 2 when the figure above is executed?
+
+	A) True
+	B) False
+	C) 2200
+	D) 12
+	E) None of the above
+
+
+####################
+# Classes Figure 1 #
+####################
+
+class Song (object):
+    def __init__(self,title,artist,album,length=0):
+        self.title = title
+        self.artist = artist
+        self.album = album
+        if length > 0:
+            self.length_in_seconds = length  
+        else:
+            self.length_in_seconds = None
+    def __str__(self):
+        if self.length_in_seconds != None:
+            mins = self.length_in_seconds // 60
+            secs = self.length_in_seconds % 60
+            s = "{} - {} ({}:{:02d})".format(self.title,self.artist,mins,secs)
+            return s
+        else:
+            s = "{} - {}".format(self.title,self.artist)
+            return s
+
+s1 = Song("Anti-Hero","Taylor Swift","Midnights",200)
+s2 = Song("Friday","Rebecca Black","Friday")
+print(s1)						#LINE 1
+print(s2)						#LINE 2
+
+
+23. What is output by Line 1 when the figure above is executed?
+
+	A) Anti-Hero - Taylor Swift (3:20)
+	B) Friday - Rebecca Black
+	C) Anti-Hero - Taylor Swift
+	D) Anti-Hero - Taylor Swift (200)
+	E) None of the above
+
+
+24. What is output by Line 2 when the figure above is executed?
+
+	A) Friday - Rebecca Black
+	B) Friday - Rebecca Black (0:00)
+	C) Friday - Rebecca Black (3:20)
+	D) Anti-Hero - Taylor Swift
+	E) None of the above
+
+
+25. Given the dictionary below, which of the following code segments will print "Hoover"?
+
+president_dict = {1:'Washington', 8:'Van Buren', 31:'Hoover', 25:'McKinley'}
+
+	A) print(president_dict[31])
+	B) print(president_dict[2])
+	C) print(president_dict[3])
+	D) print(president_dict['Hoover'])
+	E) None of the above
+
+
+####################
+# Classes Figure 2 #
+####################
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return self.name
+
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says Meow!"
+
+class Snake(Animal):
+    pass
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+bird = Animal("Polly")
+snake = Snake("Hiss")
+
+animals = [dog, cat, bird, snake]
+animal = animals[1]
+
+print(type(animal))                 # LINE 1
+
+for animal in animals:
+    print(animal.speak(), end=' ')  # LINE 2
+print()
+
+print(snake)                        # LINE 3
+
+
+26. What is output by Line 1 when the figure above is executed?
+
+	A) <class '__main__.Animal'>
+	B) <class '__main__.Dog'>
+	C) <class '__main__.Cat'>
+	D) <class 'str'>
+	E) None of the above
+
+
+27. What is output by Line 2 when the figure above is executed? Note: Consider all calls to the print function in selecting your answer.
+
+	A) Hi Hi Hi Hi
+	B) Buddy says Woof! Whiskers says Meow! Hi Hiss says Hi!
+	C) Buddy says Woof! Whiskers says Meow! Hi Hi
+	D) AttributeError: 'Snake' object has no attribute 'speak'
+	E) None of the above
+
+
+28. What is output by Line 3 when the figure above is executed?
+
+	A) <class '__main__.Snake'>
+	B) Hiss
+	C) Snake
+	D) Hi
+	E) None of the above
+
+
+##################
+# Class Figure 3 #
+##################
+
+class Time:
+    def __init__(self, hours, minutes):
+        self.total_minutes = hours * 60 + minutes
+
+    def __add__(self, other):
+        if isinstance(other, Time):
+            total_minutes = self.total_minutes + other.total_minutes
+        elif isinstance(other, int):
+            total_minutes = self.total_minutes + other
+        else:
+            raise ValueError(f"Cannot add {type(other)} and Time object")
+        total_minutes %= 24 * 60
+        return Time(total_minutes // 60, total_minutes % 60)
+
+    def __radd__(self, other):
+        return self.__add__(other)
+
+    def __str__(self):
+        hours = self.total_minutes // 60
+        minutes = self.total_minutes % 60
+        return f"{hours:02d}:{minutes:02d}"
+
+time1 = Time(1, 30)
+time2 = Time(2, 45)
+
+print(time1 + time2)  		# LINE 1
+print(21 + time2)		# LINE 2
+
+
+29. What is output by Line 1 when the figure above is executed?
+
+	A) 1:30
+	B) 3:75
+	C) 4:15
+	D) Cannot add <class 'str'> and Time object
+	E) None of the above
+
+
+30. What is output by Line 2 when the figure above is executed?
+
+	A) 2:45
+	B) 2:66
+	C) 3:06
+	D) Cannot add <class 'int'> and Time object
+	E) None of the above
+
+
+

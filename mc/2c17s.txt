@@ -1,0 +1,419 @@
+CSE 231 SS17             Last name (printed):  ________________________________
+
+Exam #2                  First name (printed): ________________________________
+
+Form 2 C                 
+
+
+Directions:
+
+a. DO NOT OPEN YOUR EXAM BOOKLET UNTIL YOU HAVE BEEN TOLD TO BEGIN.
+
+b. This exam booklet contains 30 questions, each of which will be weighted
+equally at 5 points each.   The total points for the exam is 150 points.
+
+c. You may use one 8.5" x 11" note sheet during the exam.  No other reference
+materials or electronic devices may be used during the examination, i.e. no
+calculators, cell phones, mp3 players, etc.. Paper dictionaries are allowed.
+
+d. Questions will not be interpreted during the examination.
+
+e. You should choose the single best alternative for each question, even if
+you believe that a question is ambiguous or contains a typographic
+error.  If a question has more than one best answer, credit will be
+given for any of the correct answers.
+
+f. Please fill in the requested information at the top of this exam booklet.
+
+g. Use a #2 pencil to encode any information on the OMR form.
+
+h. Please encode the following on the OMR form:
+
+     -- Last name and first initial
+     -- MSU PID
+     -- Exam form (2 C)
+
+i. Please sign the OMR form.
+
+j. Only answers recorded on your OMR form for multiple choice questions will be 
+counted for credit.  Completely erase any responses on the OMR form that you 
+wish to delete.
+
+k. You must turn in this exam booklet and the OMR form when you have completed
+the exam.  When leaving, please be courteous to those still taking the exam.
+
+Form 2C
+1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
+C    B    B    B    D    AB   C    D    C    B    C    A    C    CD   C
+
+16   17   18   19   20   21   22   23   24   25   26   27   28   29   30
+B    E    CD   DE   BD   C    A    A    B    A    C    C    A    E    CE
+
+01. Given L = ['s','i','t']
+    what is ''.join(L)
+
+    A) ['sit']
+    B) ('sit')	
+    C) 'sit'
+    D) 's'+'i'+'t'
+    E) None of the above.
+
+02. Given L1 = [1,4] and L2 = [2,3],  what is the value of L1 after 
+    executing L1.extend(L2)?
+
+    A) [1, 2, 3, 4]
+    B) [1, 4, 2, 3] 
+    C) [1, 4, [2, 3]]
+    D) [[1, 4], [2, 3]]	
+    E) None of the above.
+
+03. Given s = "-x-y-z-"
+    what is s.split("-")
+
+    A) ['x', 'y', 'z']	
+    B) ['', 'x', 'y', 'z', '']	
+    C) 'x-y-z'
+    D) 'xyz'
+    E) None of the above.
+
+
+04. Given the following code, what is printed by Line 1?
+
+    L = []
+    for i in range(8):
+        if i%2:
+            L.append(i)
+    print(L)    # Line 1
+
+    A) [0, 2, 4, 6]
+    B) [1, 3, 5, 7]
+    C) [0, 2, 4, 6, 8]
+    D) [1, 3, 5]
+    E) None of the above
+
+05. Given the list of digits L1 = [2,3,5,10]
+    Which of the following prints their mean, i.e. 5?
+
+    A) print( sum(L1)/count )	
+    B) print( sum(L1)/L1.count() )
+    C) print( math.mean(L1) )	
+    D) print( sum(L1)/len(L1) )
+    E) None of the above.
+	
+06. Which operation is not allowed on a tuple, T?
+
+    A) T[2] = a
+    B) T.append(5)
+    C) a = T[2]
+    D) x in T
+    E) None of the above
+
+   ############
+   # Figure 1 #
+   ############
+   def f1(A,B):         
+       B += 2       
+       A.append(B)    
+
+   L = [1,2,3]
+   x = 2
+   y = f1(L,x)
+   print(x)     # Line 1
+   print(y)     # Line 2
+   print(L)     # Line 3
+
+07. In Figure 1, what is printed by Line 1?
+
+    A) 0
+    B) 1
+    C) 2
+    D) None
+    E) None of the above
+
+08. In Figure 1, what is printed by Line 2?
+
+    A) 0
+    B) 1
+    C) 2
+    D) None
+    E) None of the above
+
+09. In Figure 1, what is printed by Line 3?
+
+    A) []
+    B) [1, 2, 3]
+    C) [1, 2, 3, 4]
+    D) [1, 2, 3, 2]
+    E) None of the above
+	
+   ############
+   # Figure 2 #
+   ############
+
+  def f3(L):
+      S = set()
+      for i in L:
+          S.XXXXX(i)  # Line 0
+      return S
+      
+  L = [1,1,2,2,3]
+  print(f3(L))      # Line 1
+
+10. In Figure 2, what is XXXXX in Line 0 so Line 1 prints {1, 2, 3}
+
+    A) append
+    B) add	
+    C) extend
+    D) union
+    E) None of the above
+
+  ############
+  # Figure 3 #
+  ############
+  def f2(n=3,c='a'):                
+      return c * n             
+  
+  print( f2() )     # Line 1
+  print( f2(n=4) )  # Line 2     
+
+11. What is printed by Line 1 of Figure 3?
+
+    A) 'a'*3 
+    B) 3*'a'
+    C) aaa
+    D) None
+    E) None of the above
+
+12. What is printed by Line 2 of Figure 3?
+
+    A) aaaa
+    B) 34
+    C) 12
+    D) None
+    E) None of the above
+	
+13. Given
+
+    L = [(0,1),(2,4),(3,5)]
+
+   Which expressions returns the sum of the first elements of the tuple, i.e. 5?
+
+    A) [x+y for x,y in L]
+    B) sum([x for x in L])	
+    C) sum([x for x,y in L])
+    D) sum([y for x,y in L])	
+    E) None of the above
+   
+14.  Which of the following cannot be used as a key in a dictionary?  
+
+    A) string
+    B) tuple
+    C) dictionary
+    D) set	
+    E) None of the above.
+
+15. What is the value of
+      sum({1,2,2,2,3})    # this is correct Python, no error
+
+    A) 10
+    B) {1, 2, 3}
+    C) 6	
+    D) None
+    E) None of the above
+
+############
+# Figure 4 #
+############
+
+  def f4(w,s=''):
+      for i in w:
+          s += i
+      return s
+      
+  fp = open('test1.txt')
+  D1 = {}
+  n = 0
+  for x in fp:
+      n += 1
+      y = x.split()
+      L = []
+      for i in y:
+          L.append(i)
+      D1[n] = f4(L)
+  print(D1[2])  # Line 1
+  
+  D2 = {}
+  for k,v in D1.items():
+      D2[k] = [ch for ch in v]
+  
+  print(D2[0])  # Line 2
+
+The file test1.txt:
+  1 2 3 4 5
+  6 7 8 9
+  5 4 3 2
+
+16. What is printed by Line 1 when Figure 4 is executed?
+
+    A) 12345
+    B) 6789
+    C) 15
+    D) 30
+    E) None of the above
+
+17. What is printed by Line 2 when Figure 4 is executed?
+
+    A) ['1', '2', '3', '4', '5']
+    B) ['6', '7', '8', '9']
+    C) ['1', '5']
+    D) ['3', '0']
+    E) None of the above
+
+18. Given
+  D = {'1': 4, 'c': 5, 'b': 6, 'a': 4, '3': 2}
+ what returns
+  [(2, '3'), (4, '1'), (4, 'a'), (5, 'c'), (6, 'b')]
+
+    A) sorted((k,v) for k,v in D.items())
+    B) sorted([(k,v) for k,v in D.items()])
+    C) sorted((v,k) for k,v in D.items())	
+    D) sorted([(v,k) for k,v in D.items()])
+    E) None of the above
+
+19. Given
+        D = {'a':[1,2],'b':[5,6],'c':[7,8]}
+    which statement prints 7?
+
+    A) print(D['c'])	
+    B) print(D[2][0])
+    C) print(D['c'][1])
+    D) print([7,8][0])
+    E) None of the above
+
+20. Given
+    L = [[1,2,3],[4,5,6],[7,8,9]]
+    which statement prints 7?
+
+    A) L[6]
+    B) L[-1][0]	
+    C) L[3][1]
+    D) L[-1][-3]
+    E) None of the above.
+
+21. Given
+        from operator import itemgetter
+        L = [[4,2,6],[1,3,5],[1,1,1]]
+    what is returned by
+        sorted(L,key=itemgetter(2))
+
+    A) [[4, 2, 6], [1, 3, 5], [1, 1, 1]]
+    B) [[4, 2, 6], [1, 1, 1], [1, 3, 5]]
+    C) [[1, 1, 1], [1, 3, 5], [4, 2, 6]]
+    D) [[1, 1, 1], [4, 2, 6], [1, 3, 5]]
+    E) None of the above
+
+############
+# Figure 5 #
+############
+
+  S1 = set( "Mississippi" )
+  S2 = set( "aeiou")
+  S3 = { 4, 5, 6, 5 }
+  S4 = { 4, 5, 6, 7, 8 }
+  print( len(S1), len(S3) ) # Line 1
+  print( S3 < S4 ) # Line 2
+  print( S3 & S4 ) # Line 3
+  print( S3 | S4 ) # Line 4
+  print( S3 ^ S4 ) # Line 5
+  print( S1 - S2 ) # Line 6
+
+22. What is printed by Line 1 when Figure 5 is executed?
+
+    A)  4 3
+    B)  4 5
+    C) 11 3
+    D) 11 5		
+    E) None of the above
+
+23. What is printed by Line 2 when Figure 5 is executed?
+
+    A) True
+    B) False
+
+24. What is printed by Line 3 when Figure 5 is executed?
+
+    A) {4, 5, 6, 7, 8}
+    B) {4, 5, 6}	
+    C) {7, 8}
+    D) {}
+    E) None of the above
+
+25. What is printed by Line 4 when Figure 5 is executed?
+
+    A) {4, 5, 6, 7, 8}
+    B) {4, 5, 6}	
+    C) {7, 8}
+    D) {}
+    E) None of the above
+
+26. What is printed by Line 5 when Figure 5 is executed?
+
+    A) {4, 5, 6, 7, 8}
+    B) {4, 5, 6}	
+    C) {7, 8}
+    D) {}
+    E) None of the above
+
+27. What is printed by Line 6 when Figure 5 is executed?
+
+    A) {'M', 'i', 's', 'p'}
+    B) {'a', 'e', 'i', 'o', 'u'}	
+    C) {'M', 's', 'p'}
+    D) {'a', 'e', 'o', 'u'}
+    E) None of the above
+
+############
+# Figure 6 #
+############
+  def F( S ):         
+    M = {}  
+    for ch in S:
+       if ch.lower() not in "aeiou": 
+          try:                     
+              M[ch] = M[ch]+1                 
+          except:                     
+              M[ch] = 1 
+    return M
+    
+  A = F( "to be, or not to be" )
+  print( len(A) )      # Line 1     
+  print( A['o'] )      # Line 2     
+  B = []     
+  for K,V in A.items():         
+      B.append( (V, K) )
+  B.sort( reverse=True )
+  print( B[0] )        # Line 3
+      
+28. What is printed by Line 1 when Figure 6 is executed?
+
+    A) 6
+    B) 5
+    C) 3
+    D) 2
+    E) None of the above.
+
+29. What is printed by Line 2 when Figure 6 is executed?
+
+    A) 6
+    B) 5
+    C) 3
+    D) 2
+    E) None of the above.
+
+30. What is printed by Line 3 when Figure 6 is executed?
+
+    A) (1, ',')
+    B) (' ', 5)	
+    C) (5, ' ')
+    D) (4, 'o')	
+    E) None of the above.
